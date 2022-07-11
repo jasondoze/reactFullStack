@@ -55,3 +55,7 @@ is method used to create a new object from another objects template
 
 Lifecycle methods
 component DidMount etc...
+
+Components re-render based on two conditions:
+when set state gets called 
+when props gets updated
