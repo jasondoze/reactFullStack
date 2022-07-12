@@ -59,3 +59,87 @@ component DidMount etc...
 Components re-render based on two conditions:
 when set state gets called 
 when props gets updated
+
+Functional components instead of Class components
+written as arrow functions
+a react functional component takes arguments that are the props of this component and then runs as JSX
+
+class Component
+<!-- class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: { firstName: "Jason", lastName: "Chadwick" },
+      company: "xyz",
+    };
+  }
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Hola {this.state.name.firstName} {this.state.name.lastName}, I work
+            at {this.state.company}
+          </p>
+          <button
+            onClick={() => {
+              // set state is shallow merge with current state object- updates state to a new object
+              this.setState(
+                () => {
+                  return {
+                    name: { firstName: "Melina", lastName: "Mattos" },
+                  };
+                },
+                // this logging function will run a callback for the state after the set state has changed so as not to log synchronously and actually give the wrong log of the previous instead of current state
+                () => {
+                  console.log(this.state);
+                }
+              );
+            }}
+          >
+            Change Name
+          </button>
+        </header>
+      </div>
+    );
+  }
+} -->
+
+functional Component
+<!-- function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          welcome to react bitchez
+        </a>
+      </header>
+    </div>
+  );
+} -->
+
+
+
+const App = () => {
+the return of a functional component renders the UI
+
+Pure function- a function that returns the same no matter how many times its called
+
+Impure function- when a function has external variables that can change the return
+
+useEffect
+to access variables outside of a pure function, useEffect hooks must be used inside the function
+
+useEffect takes two arguments, a callback function contains the code or effect we want to happen in our functional component
+the second array will contain the values, whenever any values inside the array change, the callback function will be ran every time there is a change
+useEffect(() => {}, [])
