@@ -13,6 +13,7 @@ const App = () => {
 
   // use state will ecapsulate individual values from that state, each hook only hooks into one value
   const [searchField, setSearchField] = useState(""); // [value, setValue]
+  const [title, setTitle] = useState("");
   const [monsters, setMonsters] = useState([]);
   const [filteredMonsters, setFilterMonsters] = useState(monsters);
 
@@ -28,7 +29,7 @@ const App = () => {
     const newFilteredMonsters = monsters.filter((monster) => {
       return monster.name.toLocaleLowerCase().includes(searchField);
     });
-    setFilterMonsters(newFilteredMonsters)
+    setFilterMonsters(newFilteredMonsters);
   }, [monsters, searchField]);
 
   const onSearchChange = (event) => {
@@ -36,21 +37,31 @@ const App = () => {
     setSearchField(searchFieldString);
   };
 
+  const onTitleChange = (event) => {
+    const searchFieldString = event.target.value.toLocaleLowerCase();
+    setTitle(searchFieldString);
+  };
+
   // the return of a functional component renders the UI
   return (
     <div className="App">
-      <h1 className="app-title">Monstrosities</h1>
+      <h1 className="app-title">{title}</h1>
 
       <SearchBox
         className="search-box"
         onChangeHandler={onSearchChange}
         placeholder="search monsters"
       />
+      <br />
+      <SearchBox
+        className="title-search-box"
+        onChangeHandler={onTitleChange}
+        placeholder="set title"
+      />
       <CardList monsters={filteredMonsters} />
     </div>
   );
 };
-
 
 // writing a class Component
 // class App extends Component {

@@ -4,8 +4,6 @@ remove unused code from app.css
 change app.js to const App arrow function
 create containers for the home page
 
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
