@@ -6,6 +6,10 @@ create containers for the home page
 
 add Sass for reacte CSS rendering
 npm add sass
+download and add fonts
+
+npm npm add react-router-dom@6
+import browser router from react router dom
 
 # Getting Started with Create React App
 
