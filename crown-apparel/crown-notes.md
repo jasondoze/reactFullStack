@@ -10,6 +10,19 @@ download and add fonts
 
 npm npm add react-router-dom@6
 import browser router from react router dom
+import Link, and Outlet
+
+setup firebase to spin up a database 
+install firebase library in the project
+npm add firebase
+
+set up a signin in crown apparel
+
+CRUD
+create
+read- fetch
+update- change the data
+delete
 
 # Getting Started with Create React App
 
