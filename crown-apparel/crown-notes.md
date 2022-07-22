@@ -24,6 +24,54 @@ read- fetch
 update- change the data
 delete
 
+Optional: How to fix 403: restricted_client error
+It's possible you may encounter a google Authorization error that says 403:restricted_client. If you do, here are the instructions to fix it!
+
+There should be a Learn More link in the popup, clicking that should take you to the Google APIs console that has three tabs under the header named Credentials, OAuth Consent Screen, and Domain Verification. Go to the OAuth Consent Screen tab and update the Application Name to "crwn-clothing" or any other name you're comfortable with (i.e. the name of your project). Click on save at the bottom, then try logging into your verified Google account thereafter.
+
+# Firebase Config
+set up a utils directory for firebase
+create a firebase directory in utils
+create a firebase.utils.js file in firebase3
+set up firebase
+authenticate firebase
+enable firebase
+
+create a button to sigin to google auth in sign in page
+creates an access token to create CRUD requests
+
+# Firestore Database
+after a user is authenticated we will also store a record of them in firestore
+collection contains the document with data
+document contains the data // pretty much JSON objects
+data actual user information
+
+-collection would be multiples of the data below
+
+NikeAirMax -document
+  -data
+  name: "Air Max"
+  brand: "Nike"
+  imageURL: 'wwww....."
+  cost: 
+    price: 150
+    currency: "USD"
+
+# Setting up user documents
+go into firestore database
+create database
+start in production mode
+click next
+click closest us central
+click enable
+we now have an emtpy database
+click edit rules
+change read, write: if true; // defines who can modify docs
+click publish
+
+in the app- firebase.utils.js
+import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
