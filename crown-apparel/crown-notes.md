@@ -72,6 +72,11 @@ click publish
 in the app- firebase.utils.js
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 
+
+# Create a new provider for email/password
+in Firebase, add new provider- email/password
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
