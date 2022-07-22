@@ -1,5 +1,14 @@
-# Created by https://www.toptal.com/developers/gitignore/api/node,macos,sass,react
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,macos,sass,react
+# Created by https://www.toptal.com/developers/gitignore/api/macos,node,firebase,sass
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,node,firebase,sass
+
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/
 
 ### macOS ###
 # General
@@ -174,23 +183,10 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-### react ###
-.DS_*
-**/*.backup.*
-**/*.back.*
-
-node_modules
-
-*.sublime*
-
-psd
-thumb
-sketch
-
 ### Sass ###
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
 
-# End of https://www.toptal.com/developers/gitignore/api/node,macos,sass,react
+# End of https://www.toptal.com/developers/gitignore/api/macos,node,firebase,sass
