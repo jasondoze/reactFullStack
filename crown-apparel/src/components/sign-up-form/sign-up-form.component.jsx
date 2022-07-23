@@ -1,5 +1,8 @@
 import { useState } from 'react';
-import { createUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils"
+import {
+  createUserWithEmailAndPassword,
+  createUserDocumentFromAuth,
+} from '../../utils/firebase/firebase.utils';
 
 const defaultFormFields = {
   displayName: '',
@@ -13,10 +16,23 @@ const SignUpForm = () => {
   const { displayName, email, password, confirmPassword } = formFields;
   console.log(formFields);
 
-const handleSubmit = async (event) => {
-  event.preventDefault();
-  
-}
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (password !== confirmPassword) {
+      alert('passwords do not match');
+      return;
+    }
+
+    try {
+      const { user } = await createUserWithEmailAndPassword(email, password);
+
+      await createUserDocumentFromAuth(user, {displayName});
+
+    } catch (error) {
+      console.log('user creation encountered an error', error);
+    }
+  };
 
   // on changehandler for each event
   const handleChange = (event) => {
