@@ -21,6 +21,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
+
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({
   prompt: 'select_account',
@@ -44,7 +45,7 @@ export const createUserDocumentFromAuth = async (
 
   const userDocRef = doc(db, 'users', userAuth.uid);
 
-  console.log(userDocRef);
+  // console.log(userDocRef);
 
   const userSnapshot = await getDoc(userDocRef);
   console.log(userSnapshot);
@@ -70,8 +71,7 @@ export const createUserDocumentFromAuth = async (
   return userDocRef;
 };
 
-export default createUserWithEmailAndPassword = async (email, password) => {
+export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
-
   return await createUserWithEmailAndPassword(auth, email, password);
 };

@@ -1,7 +1,7 @@
 import {
-  createUserDocumentFromAuth,
   signInWithGooglePopup,
-} from '../../utils/firebase/firebase.utils';
+  createUserDocumentFromAuth,
+} from '../../utils/firebase/firebase.utils'
 
 import SignUpForm from '../../components/sign-up-form/sign-up-form.component';
 
@@ -21,3 +21,4 @@ const SignIn = () => {
 };
 
 export default SignIn;
+// crown-apparel/src/components/sign-up-form/sign-up-form.component.jsx
