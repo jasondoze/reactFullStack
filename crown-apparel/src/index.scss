@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: "Open PTSansNarrow", sans-serif;
- 
+  padding: 0;
+  font-family: 'PT Sans Narrow', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,12 +11,3 @@ code {
     monospace;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-// matches evertyhing to apply to all boxes
-* {
-  box-sizing: border-box;
-}
