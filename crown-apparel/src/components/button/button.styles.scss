@@ -9,7 +9,7 @@
   background-color: black;
   color: white;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed';
+  font-family: 'PT Sans Narrow';
   font-weight: bolder;
   border: none;
   cursor: pointer;
@@ -27,8 +27,8 @@
     color: white;
 
     &:hover {
-      background-color: #357ae8;
-      border: none;
+      background-color: #ffffff;
+      border: 1px solid #4285f4;
     }
   }
 
