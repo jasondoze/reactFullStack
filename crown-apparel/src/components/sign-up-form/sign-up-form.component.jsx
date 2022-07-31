@@ -6,7 +6,10 @@ import {
   createUserDocumentFromAuth,
 } from '../../utils/firebase/firebase.utils';
 
+import './sign-up-form.styles.scss';
+
 const defaultFormFields = {
+  displayName: '',
   email: '',
   password: '',
   confirmPassword: '',
@@ -14,8 +17,7 @@ const defaultFormFields = {
 
 const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
-  const { email, password, confirmPassword } = formFields;
-  console.log(formFields);
+  const { displayName, email, password, confirmPassword } = formFields;
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -35,7 +37,7 @@ const SignInForm = () => {
         password
       );
 
-      await createUserDocumentFromAuth(user, { email });
+      await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
     } catch (error) {
       if (error.code === 'auth/email-already-in-use') {
@@ -54,10 +56,18 @@ const SignInForm = () => {
   };
 
   return (
-    <div className='sign-in-container'>
-      <h2>I already have an account</h2>
-      <span>Sign in with your email and password</span>
+    <div className='sign-up-container'>
+      <h2>Don't have an account?</h2>
+      <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
+        <FormInput
+          type='text'
+          name='displayName'
+          value={displayName}
+          onChange={handleChange}
+          label='Display Name'
+          required
+        />
         <FormInput
           label='Email'
           type='email'
@@ -84,7 +94,7 @@ const SignInForm = () => {
           name='confirmPassword'
           value={confirmPassword}
         />
-        <Button type='submit'>Sign In</Button>
+        <Button type='submit'>Sign Up</Button>
       </form>
     </div>
   );
