@@ -11,9 +11,9 @@ const App = () => {
       <Route path='/' element={<Navigation />}>
         {/* index will match the / path when empty and render it */}
         <Route index element={<Home />} />
-        <Route path='/shop' element={<Shop />} />
-        <Route path='/auth' element={<Authentication />} />
-        <Route path='/checkout' element={<Checkout />} />
+        <Route path='shop/*' element={<Shop />} />
+        <Route path='auth' element={<Authentication />} />
+        <Route path='checkout' element={<Checkout />} />
       </Route>
     </Routes>
   );
