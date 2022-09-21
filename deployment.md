@@ -232,7 +232,7 @@ IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
 Someone could be eavesdropping on you right now (man-in-the-middle attack)!
 It is also possible that a host key has just been changed.
 The fingerprint for the ED25519 key sent by the remote host is
-SHA256:L0dOsCXeNtkdfMeKIcoFz0X9RMv38z5RvaoPv1bba28.
+
 Please contact your system administrator.
 Add correct host key in /Users/jasondoze/.ssh/known_hosts to get rid of this message.
 Offending ECDSA key in /Users/jasondoze/.ssh/known_hosts:18
