@@ -82,19 +82,7 @@ On your host machine (the one with multipass installed), change to the directory
 Your identification has been saved in multipass-ssh-key
 Your public key has been saved in multipass-ssh-key.pub
 The key fingerprint is:
-SHA256:xdx4QprjBc7xV3ycIt5sl9m2gMgORrsPgYcizELdKXg vmuser
-The key's randomart image is:
-+---[RSA 3072]----+
-|  o . . o .  ....|
-| o E o + X + o..o|
-|+ . . + O @ O ..+|
-|.+ . o B * * = +o|
-|. . . o S   . o..|
-|       o .     . |
-|        o        |
-|         .       |
-|                 |
-+----[SHA256]-----+
+
 ```
 
 <br>
