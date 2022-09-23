@@ -72,6 +72,7 @@ ssh into the new VM with this IP-address
 <br>
 
 ## Create ssh-key
+
 ---
 On your host machine (the one with multipass installed), change to the directory from where you will be launching multipass vms. It can be your home directory, but any other will do.
 
@@ -133,7 +134,7 @@ users:
 
 <br>
 
-The <content of YOUR public key> starts with the letters ssh-rsa and ends with the username you supplied in step 1. Both have to be included!
+The content with you public key starts with the letters ssh-rsa and ends with the username you supplied in step 1. Both have to be included!
 
 <br>
 
