@@ -1,8 +1,8 @@
 users:
   - default
-  - name: vmuser
+  - name: crownapp
     sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
     ssh_authorized_keys:
-    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDGnfoG8LLpfWES0el5xcoBq+mHqRx2eIZ9jxB9HwU++5WJjOVaRXF1PBl0ontxOtLsK0yJRnTwegs1Wns1iimcjfuTQuBj2d5ZWxqC1FLIWSGdOy2P+4V+hfpPz92uvCU0/EYFwhjLdMivPHDLhnt0m8OS58mYFctf+Oe+gHXrQR/eiedjr5a6snjtbdUV1s7I3r63m4qwXD8gE8Belw8seg9HZp9JskBLJf7pOE34+GZj460iPYUXOWZGG9dymutnXyLmh5EGqpv9cYN0bjCMM+8Lk7LM7yv/nNLt3wm7qFAzZRw1iIjUqJo2yNeZ+WcO73EdIqINWzDc8+Unjzf2XrfO+NoIeInWj257zoAaANwZQGaya0ATOB9iAfYZbzX35RhBhyL3AmHwUIXUBuDXmQFdtfX/T/Taq/YhZnagFgpfn3lVQUG5+9xzrGFTJLLk3UPKo/HagBRCqRkYOJ6W0Luj3on9LMTOM0icSQVdgTjTczS1ZVwk/sDiAOl3s5s= 
-vmuser
+      - ssh-rsa /1V8qhEvyVQLUZGJvEBp3PX00ac07z1L/TlMdlUCNtjEg5eqPbIlGbR3iOj9Dr9SwzgGTDGWIYnT++cQaCkxK0Tp9z/PypWQgV87wQFqbJKfzCUyOn1CfGUJDOXYMI/gXMugyT237VUzhQE0b5E6hYpc54KmNwmFXTIW5KeWBz/fndp5P5GqqKv2s1fMwXrNTXxkQDb/afYP+Lk/b2Q44Xow8Cilb+trmT2S0+8NdM1uZlnIUoklhBNM4jKaKlSzUmJrs6Pf30d2ukVr51cokKYfU5Z02OIFMfgZ03OyNtYu3i/jdY5OUpNR4Hf++jRy29VIiczu2DbOhda8fHL4SKg/nqNPqEM6t7OAJVTQ77CFy1XhX8TZ4hd11lLjUkS3rkJfI44fKrRiAacWbPEisOZYjpgkIIp6a8pRchF3wSISs07zpCise2ugrp9Jj1TS5tuWEsgBj/8yJlw0xDcpTBxYTu2D1aKlLpECMvZ0mBM= vmuser
 
