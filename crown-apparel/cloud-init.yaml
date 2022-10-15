@@ -4,5 +4,5 @@ users:
     sudo: ALL=(ALL) NOPASSWD:ALL
     shell: /bin/bash
     ssh_authorized_keys:
-      - ssh-rsa /1V8qhEvyVQLUZGJvEBp3PX00ac07z1L/TlMdlUCNtjEg5eqPbIlGbR3iOj9Dr9SwzgGTDGWIYnT++cQaCkxK0Tp9z/PypWQgV87wQFqbJKfzCUyOn1CfGUJDOXYMI/gXMugyT237VUzhQE0b5E6hYpc54KmNwmFXTIW5KeWBz/fndp5P5GqqKv2s1fMwXrNTXxkQDb/afYP+Lk/b2Q44Xow8Cilb+trmT2S0+8NdM1uZlnIUoklhBNM4jKaKlSzUmJrs6Pf30d2ukVr51cokKYfU5Z02OIFMfgZ03OyNtYu3i/jdY5OUpNR4Hf++jRy29VIiczu2DbOhda8fHL4SKg/nqNPqEM6t7OAJVTQ77CFy1XhX8TZ4hd11lLjUkS3rkJfI44fKrRiAacWbPEisOZYjpgkIIp6a8pRchF3wSISs07zpCise2ugrp9Jj1TS5tuWEsgBj/8yJlw0xDcpTBxYTu2D1aKlLpECMvZ0mBM= vmuser
+
 
