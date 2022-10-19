@@ -2,7 +2,9 @@ import { compose, createStore, applyMiddleware } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import logger from 'redux-logger';
-import thunk from 'redux-thunk'
+import createSagaMiddleware from 'redux-saga';
+
+import { rootSaga } from './root-saga';
 
 import { rootReducer } from './root-reducer';
 
@@ -12,24 +14,29 @@ const persistConfig = {
   whitelist: ['cart'],
 };
 
-const persitedReducer = persistReducer(persistConfig, rootReducer);
+const sagaMiddleware = createSagaMiddleware();
 
-// hide loggers while in production environment
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
 const middleWares = [
-  process.env.NODE_ENV === 'development' && logger,
-  thunk,
+  process.env.NODE_ENV !== 'production' && logger,
+  sagaMiddleware,
 ].filter(Boolean);
 
-// if we are not in production and there is no window and these chrome dev tools exist, use dev tools
-// else just use redux compose
-const composedEnhancer =
+const composeEnhancer =
   (process.env.NODE_ENV !== 'production' &&
     window &&
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
   compose;
 
-const composedEnhancers = composedEnhancer(applyMiddleware(...middleWares));
+const composedEnhancers = composeEnhancer(applyMiddleware(...middleWares));
 
-export const store = createStore(persitedReducer, undefined, composedEnhancers);
+export const store = createStore(
+  persistedReducer,
+  undefined,
+  composedEnhancers
+);
+
+sagaMiddleware.run(rootSaga);
 
 export const persistor = persistStore(store);
