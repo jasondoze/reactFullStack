@@ -5,11 +5,7 @@ import { selectCartTotal } from '../../store/cart/cart.selector';
 import { selectCurrentUser } from '../../store/user/user.selector';
 import { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
-import {
-  PaymentFormContainer,
-  FormContainer,
-  PaymentButton,
-} from './payment-form.styles';
+import { PaymentFormContainer, FormContainer, PaymentButton } from './payment-form.styles';
 
 const PaymentForm = () => {
   const stripe = useStripe();
@@ -26,7 +22,7 @@ const PaymentForm = () => {
     }
     setIsProcessingPayment(true);
 
-    const response = await fetch('/.netlify/functions/create-payment-intent', {
+    const response = await fetch('../../../functions/create-payment-intent.js', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +33,7 @@ const PaymentForm = () => {
     const {
       paymentIntent: { client_secret },
     } = response;
-    // console.log(client_secret);
+  //  console.log(client_secret);
 
     const paymentResult = await stripe.confirmCardPayment(client_secret, {
       payment_method: {
@@ -64,9 +60,7 @@ const PaymentForm = () => {
       <FormContainer onSubmit={paymentHandler}>
         <h2>Credit Card Payment: </h2>
         <CardElement />
-        <PaymentButton
-          isLoading={isProcessingPayment}
-          buttonType={BUTTON_TYPE_CLASSES.inverted}>
+        <PaymentButton isLoading={isProcessingPayment} buttonType={BUTTON_TYPE_CLASSES.inverted}>
           Pay Now
         </PaymentButton>
       </FormContainer>

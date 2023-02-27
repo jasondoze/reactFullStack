@@ -1,8 +1,7 @@
 users:
   - default
-  - name: crownapp
+  - name: jasondoze
     sudo: ALL=(ALL) NOPASSWD:ALL
     shell: /bin/bash
     ssh_authorized_keys:
-
-
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK3z1KBpMJROHMAUDQaQxZjehH6EdibC9nB6usbZuanm jasondoze@jd.attlocal.net
