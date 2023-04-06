@@ -23,7 +23,9 @@ Icon
 # Thumbnails
 ._*
 
-id_ed25519*
+id_ed25519.pub
+
+id_ed25519
 
 
 # Files that might appear in the root of a volume
