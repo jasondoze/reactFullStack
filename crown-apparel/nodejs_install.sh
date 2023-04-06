@@ -13,7 +13,7 @@ else
   curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - 
 fi
 
-# Install NodeJS and NPM
+# Install NodeJS, NPM, and update browserslist-db@latest
 if ( which node ) 
 then
   echo -e "\n==== NodeJS installed ====\n"
